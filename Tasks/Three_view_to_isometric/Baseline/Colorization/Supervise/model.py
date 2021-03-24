@@ -4,9 +4,9 @@ from torchvision import models
 import torch.nn as nn
 import torch
 import numpy as np
-#import bagnets.pytorchnet
 import math
 import glob
+
 
 class Three2I_colorization(nn.Module):
 
