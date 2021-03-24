@@ -22,10 +22,9 @@ parser.add_argument('--device', default='cuda:0', help='device')
 parser.add_argument('--model_type', default='vgg16', help='|vgg16| |resnet50| |Bagnet33|')
 parser.add_argument('--outf', default='/home/wenyuhan/final/I2P/', help='folder to output log')
 
+
 opt = parser.parse_args()
-
 device = opt.device
-
 task_4_model = I2P(opt.width,opt.depth).to(opt.device)
 
 
