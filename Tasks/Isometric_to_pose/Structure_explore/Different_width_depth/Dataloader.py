@@ -8,6 +8,7 @@ import os
 import numpy as np
 import json
 
+
 class I2P_data(Dataset):
     def __init__(self, root_dir):
         self.dic = sorted(os.listdir(root_dir))
