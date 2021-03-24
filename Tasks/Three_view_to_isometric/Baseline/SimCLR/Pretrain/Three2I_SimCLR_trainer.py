@@ -12,6 +12,7 @@ from Dataloader import Three2I_SimCLR_data
 from tensorboardX import SummaryWriter
 from nt_xnet import NTXentLoss
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--Training_dataroot', default="D:\spare3d_plus\Final_data\I2P_data/test/train", required=False,
                     help='path to training dataset')
@@ -25,12 +26,13 @@ parser.add_argument('--model_type', default='vgg16', help='|vgg16| |resnet50| |B
 parser.add_argument('--pretrained', action='store_true', default=False, help='If True, load pretrained dict')
 parser.add_argument('--outf', default='D:\spare3d_plus\Final_data\I2P_data/test', help='folder to output log')
 
-opt = parser.parse_args()
 
+opt = parser.parse_args()
 device = opt.device
 
 task_1_model = Three2I_SimCLR(opt.model_type,opt.pretrained)
 task_1_model =nn.DataParallel(task_1_model).to(device)
+
 
 def train_model():
     epoch_loss = 0
@@ -108,6 +110,7 @@ file = open(log_path + "/" + opt.model_type + "_Lr_" + str(opt.lr) + ".txt", "w"
 bad_shape = []
 
 high_loss = np.inf
+
 
 for epoch in range(N_EPOCHS):
     start_time = time.time()
