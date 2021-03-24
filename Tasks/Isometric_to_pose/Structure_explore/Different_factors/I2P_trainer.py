@@ -11,7 +11,6 @@ from model import *
 from tensorboardX import SummaryWriter
 
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--Training_dataroot', default="/home/wenyuhan/project/Train_dataset/Task_4_train",required=False, help='path to training dataset')
 parser.add_argument('--Validating_dataroot', default="/home/wenyuhan/project/Train_dataset/Task_4_eval",required=False, help='path to validating dataset')
@@ -28,9 +27,8 @@ parser.add_argument('--pretrained', action='store_true', default=False, help='If
 parser.add_argument('--fc', default='1', help='|1| means 1 layer, |3| means 3+1 layer')
 parser.add_argument('--outf', default='/home/wenyuhan/final/I2P/', help='folder to output log')
 
+
 opt = parser.parse_args()
-
-
 device = opt.device
 
 task_4_model=I2P(opt.model_type,opt.new_model,opt.nd,opt.na,opt.share_weights,opt.pretrained,opt.fc).to(opt.device)
@@ -93,15 +91,12 @@ def Eval():
     return failed_shape,epoch_eval_loss, epoch_eval_acc
 
 
-
-
 N_EPOCHS = opt.niter
 criterion = torch.nn.CrossEntropyLoss().to(device)
 optimizer = torch.optim.Adam(task_4_model.parameters(), lr=opt.lr)
 #optimizer=nn.DataParallel(optimizer)
 
 batch_loss_history=[]
-
 
 
 log_path=opt.outf
