@@ -10,6 +10,7 @@ from model import ColorNet
 from Dataloader import ThreeV2I_data
 from tensorboardX import SummaryWriter
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--Training_dataroot', default="C:/Users/ay162\Desktop\slack\color/train",
                     required=False, help='path to training dataset')
@@ -24,11 +25,12 @@ parser.add_argument('--device', default='cuda:0', help='device')
 parser.add_argument('--model_type', default='vgg16', help='|vgg16| |resnet50| |Bagnet33|')
 parser.add_argument('--outf', default='C:/Users/ay162\Desktop\slack\color/', help='folder to output log')
 
-opt = parser.parse_args()
 
+opt = parser.parse_args()
 device = opt.device
 
 task_1_model = ColorNet(opt.pretrained).to(device)
+
 
 def train_model():
     batch_loss = 0
@@ -82,6 +84,7 @@ file = open(log_path + "/" + opt.model_type + "_Lr_" + str(opt.lr) + ".txt", "w"
 
 lower_valid_loss = np.inf
 writer = SummaryWriter(opt.outf)
+
 
 for epoch in range(N_EPOCHS):
     start_time = time.time()
