@@ -8,6 +8,7 @@ import numpy as np
 import cv2
 import json
 
+
 class Three2I_SimCLR_data(Dataset):
     def __init__(self, root_dir):
         self.dic=sorted(os.listdir(root_dir))
