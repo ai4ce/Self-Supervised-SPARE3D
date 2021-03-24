@@ -10,6 +10,7 @@ from model import Three2I_self
 from Dataloader import ThreeV2I_data
 from tensorboardX import SummaryWriter
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--Training_dataroot', default="C:/Users/ay162\Desktop\slack\data/train",
                     required=False, help='path to training dataset')
@@ -26,8 +27,8 @@ parser.add_argument('--model_type', default='vgg16', help='|vgg16| |resnet50| |B
 parser.add_argument('--num_workers', type=int, default=1, help='number of workers')
 parser.add_argument('--outf', default='C:/Users/ay162\Desktop\slack\data', help='folder to output log')
 
-opt = parser.parse_args()
 
+opt = parser.parse_args()
 device = opt.device
 
 task_1_model = Three2I_self(opt.model_type,opt.pretrained).to(device)
@@ -85,6 +86,7 @@ def Eval():
         epoch_eval_loss = eval_loss / len(eval_data)
     return epoch_eval_loss
 
+  
 def Test():
     eval_loss = 0
     eval_acc = 0
