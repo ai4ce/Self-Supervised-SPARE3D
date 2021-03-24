@@ -2,6 +2,7 @@ import torchvision.models as models
 import torch.nn as nn
 import torch
 
+
 class Three2I_self(nn.Module):
     def __init__(self,model=None,pretrained=False):
         super(Three2I_self, self).__init__()
