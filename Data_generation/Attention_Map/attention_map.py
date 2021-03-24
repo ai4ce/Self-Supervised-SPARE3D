@@ -16,8 +16,9 @@ phases=['train','valid']
 model_types=['resnet50','vgg16','Bagnet33']
 samples_num=2
 overlay=False
-root='C:/Users/ay162\Desktop\slack/test'
-outf='C:/Users/ay162\Desktop\slack/test'
+root='C:/Users/ay162\Desktop\slack/test' # use your own root path here
+outf='C:/Users/ay162\Desktop\slack/test' # use your own outpur path here
+
 
 class Bagnet(nn.Module):
     def __init__(self, Task=None):
@@ -45,6 +46,7 @@ class Bagnet(nn.Module):
         g3 = self.model.layer4(g2)
         return [g.pow(2).mean(1) for g in (g0, g1, g2, g3)]
 
+    
 class Resnet(nn.Module):
     def __init__(self, Task=None):
         super(Resnet, self).__init__()
@@ -71,6 +73,7 @@ class Resnet(nn.Module):
         g3 = self.model.layer4(g2)
         return [g.pow(2).mean(1) for g in (g0, g1, g2, g3)]
 
+    
 class VGG(nn.Module):
     def __init__(self, Task=None):
         super(VGG, self).__init__()
@@ -93,6 +96,7 @@ class VGG(nn.Module):
                 nn.ReLU(True), nn.Dropout(),
                 nn.Linear(4096, 8),
             )
+            
     def forward(self, x):
         x=self.model.features[0](x)
         x = self.model.features[1](x)
