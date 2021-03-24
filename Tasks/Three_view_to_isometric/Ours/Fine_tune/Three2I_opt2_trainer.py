@@ -10,7 +10,6 @@ from Dataloader import *
 from tensorboardX import SummaryWriter
 
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--Training_dataroot', default="/home/wenyuhan/project/Train_dataset/Task_1_train_modify/",required=False, help='path to training dataset')
 parser.add_argument('--Validating_dataroot', default="/home/wenyuhan/project/Train_dataset/Task_1_eval_modify/",required=False, help='path to validating dataset')
@@ -24,10 +23,10 @@ parser.add_argument('--model_type', default='vgg16', help='|vgg16| |resnet50| |B
 parser.add_argument('--pretrained', action='store_true', default=False, help='If True, load pretrained dict')
 parser.add_argument('--outf', default='/home/wenyuhan/final/3V2I_BC/', help='folder to output log')
 
+
 opt = parser.parse_args()
-
-
 device = opt.device
+  
   
 task_1_model = Three2I_colorization(opt.model_type, opt.pretrained).to(opt.device)
 save_model = torch.load(os.path.join(opt.model_root, 'vgg16_Lr_1e-05.pth'))
@@ -74,7 +73,6 @@ def train_model():
     
     return epoch_loss, epoch_acc, np.array(batch_loss_list)
         
-        
                                         
 def Eval():
     eval_loss = 0
@@ -102,21 +100,15 @@ def Eval():
     return epoch_eval_loss, epoch_eval_acc
 
 
-
-
 N_EPOCHS = opt.niter
 criterion = torch.nn.BCEWithLogitsLoss().to(opt.device)
 optimizer = torch.optim.Adam(task_1_model.parameters(), lr=opt.lr)
 #optimizer=torch.nn.DataParallel(optimizer)
 
 batch_loss_history=[]
-
-
-
 log_path=opt.outf
 if os.path.exists(log_path)==False:
     os.makedirs(log_path)
-
 
 
 file=open(log_path+"/"+opt.model_type+"_Lr_"+str(opt.lr)+".txt","w")
