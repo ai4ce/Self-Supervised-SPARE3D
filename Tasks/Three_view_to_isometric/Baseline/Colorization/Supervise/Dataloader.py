@@ -8,6 +8,7 @@ import numpy as np
 import cv2
 import json
 
+
 class ThreeV2I_BC_data(Dataset):
     def __init__(self, root_dir):
         self.dic=sorted(os.listdir(root_dir))
@@ -22,7 +23,6 @@ class ThreeV2I_BC_data(Dataset):
         input_dic = os.path.join(self.root_dir,
                                 self.dic[idx])
        
-        
         answer = self.answer[self.dic[idx]]
   
         Front_img=self.convert_input(input_dic,"/*f.png")
@@ -42,13 +42,16 @@ class ThreeV2I_BC_data(Dataset):
         Label=self.convert_answer(answer)
         
         return Front_img,Right_img,Top_img,Ans_1,Ans_2,Ans_3,Ans_4,Label
+    
     def __len__(self):
         return len(self.dic)
+    
     def convert_input(self,Dic,name):
         file_name=glob.glob(Dic+name)
         img=cv2.imread(file_name[0])
-      
+     
         return img/255
+    
     def convert_answer(self,index):
     
         if index==0:
@@ -60,7 +63,6 @@ class ThreeV2I_BC_data(Dataset):
         if index==3:
             output=torch.tensor([0,0,0,1])
         return output
-
 
 
 class ThreeV2I_ML_data(Dataset):
@@ -77,8 +79,6 @@ class ThreeV2I_ML_data(Dataset):
         input_dic = os.path.join(self.root_dir,
                                 self.dic[idx])
     
-       
-        
         answer = self.answer[self.dic[idx]]
         
         Front_img=self.convert_input(input_dic,"/*f.png")
@@ -94,15 +94,18 @@ class ThreeV2I_ML_data(Dataset):
         input_2=np.moveaxis(Ans_2,-1,0)
         input_3=np.moveaxis(Ans_3,-1,0)
         input_4=np.moveaxis(Ans_4,-1,0)
-       # 
+        
         return View,input_1,input_2,input_3,input_4,Label
+    
     def __len__(self):
         return len(self.dic)
+    
     def convert_input(self,Dic,name):
         file_name=glob.glob(Dic+name)
         img=cv2.imread(file_name[0])
       
         return img/255
+    
     def convert_answer(self,index):
        
         if index==0:
