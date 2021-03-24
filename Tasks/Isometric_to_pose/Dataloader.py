@@ -8,6 +8,7 @@ import json
 import os
 import numpy as np
 
+
 class I2P_data(Dataset):
     def __init__(self, root_dir):
         self.dic=sorted(os.listdir(root_dir))
@@ -21,7 +22,6 @@ class I2P_data(Dataset):
         input_dic = os.path.join(self.root_dir,
                                 self.dic[idx])
        
-        
         answer = self.answer[self.dic[idx]]
     
         Front_img=self.convert_input(input_dic,"/*f.png")
