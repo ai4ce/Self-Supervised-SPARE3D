@@ -3,8 +3,11 @@ from __future__ import print_function, division
 from torchvision import models
 import torch.nn as nn
 import torch
-#import bagnets.pytorchnet
+
+
 models.resnet50()
+
+
 class P2I(nn.Module):
 
     def __init__(self,model_type=None,pretrained=False):
