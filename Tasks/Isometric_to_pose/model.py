@@ -3,7 +3,7 @@ from __future__ import print_function, division
 from torchvision import models
 import torch.nn as nn
 import torch
-#import bagnets.pytorchnet
+
 
 class I2P(nn.Module):
 
