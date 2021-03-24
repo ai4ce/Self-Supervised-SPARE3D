@@ -10,6 +10,7 @@ cfgs = {
     'E': [64, 64, 'M', 128, 128, 'M', 256, 256, 256, 256, 'M', 512, 512, 512, 512, 'M', 512, 512, 512, 512, 'M'],
 }
 
+
 class VGG(nn.Module):
 
     def __init__(self, features, width, num_classes=4, init_weights=True):
@@ -67,6 +68,7 @@ def make_layers(cfg, batch_norm=False,width=8):
 def vgg(width=8,cfg='B',batch_norm=False):
     model = VGG(make_layers(cfgs[cfg], batch_norm=batch_norm,width=width),width)
     return model
+
 
 class I2P(nn.Module):
 
