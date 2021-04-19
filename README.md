@@ -9,7 +9,7 @@ Our approach uses a self-supervised binary classification network to compare the
 It enables deep networks to effectively learn detail-sensitive yet view-invariant line drawing representations of 3D objects. 
 Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some other popular self-supervised learning methods cannot.
 ## [Code (GitHub)](https://github.com/ai4ce/SNAC) & Dependencies
-All environment scripts can be found in [Env](https://github.com/ai4ce/SNAC/tree/main/Env) folder. These environments are developed based on the [OpenAi Gym](https://gym.openai.com/). All baseline scripts are in [script](https://github.com/ai4ce/SNAC/tree/main/script) floder. You need to install the [Pytorch](https://pytorch.org/) to run all baseline scripts. We use [Stable baseline](https://github.com/openai/baselines/) for PPO algorithm. 
+Code of three Tasks can be found in [Tasks](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks), for each task:
 
 ## [Paper (arXiv)](https://arxiv.org/abs/2103.16732)
 To cite our paper:
