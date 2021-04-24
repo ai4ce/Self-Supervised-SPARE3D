@@ -21,8 +21,6 @@ Under [Ours](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_
 Code of data generation can be found under [Data_generation folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Data_generation)
 #### [Line Drawing data](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Data_generation/Line_data)
 You can generate line drawing data which can be used in our 3 tasks' piplines by runing codes with parameters under this folder. ```I2P_ABC.py``` for isometric to pose task, ```P2I.py``` for pose to isometric task, ```Three2I_self.py``` for contrastive learning and ```Three2I.py``` for fine tuning. You need use ```.step``` model as input and run ```svg2png.py``` in each folder after you ran each script.
-#### [Shaded data](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Data_generation/Shaded_data)
-We use ```pyrender``` API and ```.obj``` models to generate shaded data. For I2P and P2I tasks, you can directly use ```I2P_Shaded.py``` and ```P2I_Shaded.py``` scripts to generate shaded data, for Three2I task, first you need to cut ```.step``` models using ```Three2I.py``` as we used in line drawing data generation process and save the ```.step``` cut models which are the intermediate products, then use ```step2obj.py``` in ```freecad``` to convert them to ```.obj``` models which can be used by ```Three2I_Shaded.py``` to generate the shaded data.
 #### [Attention map](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Data_generation/Attention_Map)
 You can generate attention maps of the trained model using ```attention_map.py``` with image path and the root of trained model path.
 ## [Paper (arXiv)](https://arxiv.org/abs/2103.16732)
