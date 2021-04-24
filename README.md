@@ -10,7 +10,7 @@ It enables deep networks to effectively learn detail-sensitive yet view-invarian
 Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some other popular self-supervised learning methods cannot.
 ## [Code (GitHub)](https://github.com/ai4ce/SNAC) & Dependencies
 ### Tasks code
-Code of three Tasks can be found under [Tasks folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks), you need to setup ```torch``` in order to run them normally, for each task:
+Code of three Tasks can be found under [Tasks folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks), you need to setup ```pytorch``` in order to run them normally, in our experiments, we used ```pytorch``` under ```cuda 10.2```, for each task:
 #### [Isometric to pose](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Isometric_to_pose)
 You can directly run ```I2P_trainer.py``` in command line with parameters to run our pipline. Our exploration experiments are under [structure_explore folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Isometric_to_pose/Structure_explore). ```Different_factors``` contains the experiments on different factors such like adaptive pooling layer, dropout layer, fully connected layer and so on that may have influence on network performance. ```Different_width_depth``` contains the experiments on width and depth of network that may have influence on performance.
 #### [Pose to isometric](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Pose_to_isometric)
