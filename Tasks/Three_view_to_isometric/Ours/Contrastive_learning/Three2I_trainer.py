@@ -20,7 +20,7 @@ parser.add_argument('--Testing_dataroot', default="C:/Users/ay162\Desktop\slack\
                     required=False, help='path to validating dataset')
 parser.add_argument('--batchSize', type=int, default=1, help='input batch size')
 parser.add_argument('--niter', type=int, default=1, help='number of epochs to train for')
-parser.add_argument('--lr', type=float, default=0.00002, help='learning rate, default=0.00002')
+parser.add_argument('--lr', type=float, default=0.00005, help='learning rate, default=0.00005')
 parser.add_argument('--pretrained', action='store_true', default=False, help='If True, load pretrained dict')
 parser.add_argument('--device', default='cuda:0', help='device')
 parser.add_argument('--model_type', default='vgg16', help='|vgg16| |resnet50| |Bagnet33|')
@@ -32,7 +32,7 @@ opt = parser.parse_args()
 device = opt.device
 
 task_1_model = Three2I_self(opt.model_type,opt.pretrained).to(device)
-#task_1_model=nn.DataParallel(task_1_model).to(device)
+
 
 def train_model():
     batch_loss = 0
