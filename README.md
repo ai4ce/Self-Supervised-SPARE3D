@@ -10,6 +10,12 @@ It enables deep networks to effectively learn detail-sensitive yet view-invarian
 Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some other popular self-supervised learning methods cannot.
 ## [Code (GitHub)](https://github.com/ai4ce/SNAC) & Dependencies
 Code of three Tasks can be found in [Tasks](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks), for each task:
+### [Isometric to pose](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Isometric_to_pose)
+You can directly run ```I2P_trainer.py``` in command line with parameters to run our pipline. Our exploration experiments are under [structure_explore folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Isometric_to_pose/Structure_explore). ```Different_factors``` contains the experiments on different factors such like adaptive pooling layer, dropout layer, fully connected layer and so on that may have influence on network performance. ```Different_width_depth``` contains the experiments on width and depth of network that may have influence on performance.
+### [Pose to isometric](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Pose_to_isometric)
+You can directly run ```P2I_trainer.py``` in command line with parameters to run our pipline.
+### [Three_view_to_isometric](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric)
+Under [Ours](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric/Ours) folder contains our pipline, you can do contrastive learning experiment to run ```Three2I_trainer.py``` with parameters under [Contrastive_learning folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric/Ours/Contrastive_learning) and fine tune the network using ```Three2I_opt2_trainer.py``` with parameters under [Fine_tune folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric/Ours/Fine_tune).
 
 ## [Paper (arXiv)](https://arxiv.org/abs/2103.16732)
 To cite our paper:
