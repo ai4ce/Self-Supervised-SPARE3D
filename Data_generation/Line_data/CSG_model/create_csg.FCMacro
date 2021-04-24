@@ -84,7 +84,6 @@ def AddShere(Sherename):
     App.ActiveDocument.recompute()
     Gui.SendMsgToActiveView("ViewFit")
 
-
     #randomly set placement the index
     AngleI = random.randint(0,4)
     Angle = AngleI * 90
@@ -106,7 +105,6 @@ def AddShere(Sherename):
     Z = random.randint(0,10)
     FreeCAD.getDocument("Unnamed").getObject(Sherename).Placement = App.Placement(App.Vector(X,Y,Z),App.Rotation(App.Vector(AppRX,AppRY,AppRZ),Angle))
 
-
     #randomly set the index of the Sphere
     R = random.randint(5,25)
     Ang1 = random.randint(1,360)
@@ -124,7 +122,6 @@ def AddCone(Conename):
     App.ActiveDocument.ActiveObject.Label = Conename
     App.ActiveDocument.recompute()
     Gui.SendMsgToActiveView("ViewFit")
-
 
     #randomly set placement the index
     AngleI = random.randint(0,4)
@@ -155,6 +152,7 @@ def AddCone(Conename):
     FreeCAD.getDocument("Unnamed").getObject(Conename).Radius2 = str(R2) + "mm"
     FreeCAD.getDocument("Unnamed").getObject(Conename).Height = str(H) + "mm"
     FreeCAD.getDocument("Unnamed").getObject(Conename).Angle = str(Ang) + " deg"
+
 
 def AddTorus(TorusName):
     App.ActiveDocument.addObject("Part::Torus",TorusName)
@@ -195,6 +193,7 @@ def AddTorus(TorusName):
     FreeCAD.getDocument("Unnamed").getObject(TorusName).Angle2 = str(Ang2) + " deg"
     FreeCAD.getDocument("Unnamed").getObject(TorusName).Angle3 = str(Ang3) + " deg"
 
+
 def CutAction():
     Gui.Selection.clearSelection()
     ob=[]
@@ -204,14 +203,13 @@ def CutAction():
             ob.append(obj)
     S1  = random.randint(0,(len(ob)-1))
 #    S2  = random.choice([i for i in range(len(ob)) if i not S1])
-
-
         
     App.activeDocument().addObject("Part::Cut","Cut")
     App.activeDocument().Cut.Base = ob[0]
     App.activeDocument().Cut.Tool = ob[S1]
 
     App.getDocument("Unnamed").recompute()
+
 
 def Randomproduce():
     Index = random.randint(1,4)
@@ -225,6 +223,8 @@ def Randomproduce():
         AddShere("Shere")
 	# if Index == 5:
         # AddTorus("Torus")
+	
+	
 def ProduceAndExport(num,name):
     for i in range(num):
         Randomproduce()
@@ -241,14 +241,12 @@ def ProduceAndExport(num,name):
     App.ActiveDocument.recompute()
 
 
-
 for n in range(0,7000):
     FreeCAD.newDocument()
     FreeCADGui.activeDocument().activeView().viewDefaultOrientation()
 
     from StartPage import StartPage
     StartPage.postStart()
-
 
     App.setActiveDocument("Unnamed")
     App.ActiveDocument=App.getDocument("Unnamed")
@@ -257,12 +255,3 @@ for n in range(0,7000):
 
     ProduceAndExport(28,n)
     App.closeDocument("Unnamed")
-
-
-
-
-
-
-        
-
-
