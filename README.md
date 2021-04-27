@@ -13,7 +13,7 @@ Experiments show that our method could significantly increase the baseline perfo
 You can download the dataset via [our google drive link](https://drive.google.com/drive/u/0/folders/1yPu3pa57eCm2iRx6AwWnp_IZK9r_RAxY). This google drive folder contains two files:
 1. contrastive_spatial_reasoning.7z, which contains "contrastive data" and "supervised data". "contrastive data" is for contrastive spatial reasoning method, "supervised data" is for fine tuning.
 
-## Dependencies
+## Dependencies & Our code 
 Requires Python3.x, PyTorch, PythonOCC. Running on GPU is highly recommended. The code has been tested on Python 3.8.5, PyTorch 1.8.0, with CUDA 11.1.
 
 ### Task code
