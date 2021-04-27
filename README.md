@@ -8,6 +8,11 @@ Guided by the hindsight from these experiment results, we propose a simple contr
 Our approach uses a self-supervised binary classification network to compare the line drawing differences between various views of any two similar 3D objects.
 It enables deep networks to effectively learn detail-sensitive yet view-invariant line drawing representations of 3D objects. 
 Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some other popular self-supervised learning methods cannot.
+
+## Data
+You can download the dataset via [our google drive link](https://drive.google.com/drive/u/0/folders/1yPu3pa57eCm2iRx6AwWnp_IZK9r_RAxY). This google drive folder contains two files:
+1. contrastive_spatial_reasoning.7z, which contains "contrastive data" and "supervised data". "contrastive data" is for contrastive spatial reasoning method, "supervised data" is for fine tuning.
+
 ## Dependencies
 Requires Python3.x, PyTorch, PythonOCC. Running on GPU is highly recommended. The code has been tested on Python 3.8.5, PyTorch 1.8.0, with CUDA 11.1.
 
@@ -20,10 +25,8 @@ Run ```I2P_trainer.py``` with the parameters explained in args in the code. Our 
 Run ```P2I_trainer.py```with the parameters explained in args in the code.
 #### [Three_view_to_isometric](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric)
 [Ours](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric/Ours) folder contains the contrastive spatial reasoning method. Run ```Three2I_trainer.py``` with parameters under [Contrastive_learning folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric/Ours/Contrastive_learning). To fine tune the network, run```Three2I_opt2_trainer.py``` with parameters under [Fine_tune folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Tasks/Three_view_to_isometric/Ours/Fine_tune).
-### Data generation
-Code of data generation can be found under [Data generation folder](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Data_generation)
 
-
+### Attention map generation
 #### [Attention map](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Data_generation/Attention_Map)
 Generate attention maps of the trained model using ```attention_map.py``` with image path and the root of trained model path.
 ## [Paper (arXiv)](https://arxiv.org/abs/2103.16732)
