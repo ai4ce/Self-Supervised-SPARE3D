@@ -1,5 +1,5 @@
 
-# # Contrastive Spatial Reasoning on Multi-View Line Drawings
+# Contrastive Spatial Reasoning on Multi-View Line Drawings
 
 [**Siyuan Xiang**](https://www.linkedin.com/in/siyuanxiang/), [**Anbang Yang**](https://www.linkedin.com/in/anbang-yang/), [**Yanfei Xue**](https://www.linkedin.com/in/yanfei-xue-a6aa511b2/), [**Yaoqing Yang**](https://sites.google.com/site/yangyaoqingcmu/), [**Chen Feng**](https://engineering.nyu.edu/faculty/chen-feng)
 
