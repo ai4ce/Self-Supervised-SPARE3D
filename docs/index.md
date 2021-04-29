@@ -50,7 +50,7 @@ To cite our paper:
 ![net](https://raw.githubusercontent.com/ai4ce/Contrastive-SPARE3D/main/docs/figs/network_architecture_simple_model.JPG?token=AKI7ZKILZXQLTMR24WAYBXDASRSZW)
 
 ### Results
-**Our method VS other baseline methods**
+**Our method vs. other baseline methods**
 ![Baseline_curve](https://raw.githubusercontent.com/ai4ce/Contrastive-SPARE3D/main/docs/figs/contrastive_vs_other.JPG?token=AKI7ZKKVE56N2Y7MK5JQA7LASRTA4)
 
 ### Attention maps for our method vs. supervised learning
