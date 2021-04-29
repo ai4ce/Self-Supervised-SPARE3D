@@ -33,6 +33,14 @@ Generate attention maps of the trained model using ```attention_map.py``` with i
 ## [Paper (arXiv)](https://arxiv.org/abs/2103.16732)
 To cite our paper:
 ```
+@misc{xiang2021contrastive,
+      title={Contrastive Spatial Reasoning on Multi-View Line Drawings}, 
+      author={Siyuan Xiang and Anbang Yang and Yanfei Xue and Yaoqing Yang and Chen Feng},
+      year={2021},
+      eprint={2104.13433},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 
 ```
 
