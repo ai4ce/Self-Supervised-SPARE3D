@@ -45,15 +45,15 @@ To cite our paper:
 ![rel](https://raw.githubusercontent.com/ai4ce/Contrastive-SPARE3D/main/docs/figs/width_depth_cropped.JPG?token=AKI7ZKNWOF2EYJ7LLOMT6TLASRSTS)
 
 
-## Contrastive spatial reasoning for task T2I 
-### Network architecture
+### Contrastive spatial reasoning for task T2I 
+**Network architecture**
 ![net](https://raw.githubusercontent.com/ai4ce/Contrastive-SPARE3D/main/docs/figs/network_architecture_simple_model.JPG?token=AKI7ZKILZXQLTMR24WAYBXDASRSZW)
 
-## Results
+### Results
 **Our method VS other baseline methods**
 ![Baseline_curve](https://raw.githubusercontent.com/ai4ce/Contrastive-SPARE3D/main/docs/figs/contrastive_vs_other.JPG?token=AKI7ZKKVE56N2Y7MK5JQA7LASRTA4)
 
-**Attention maps for our method vs. supervised learning**
+### Attention maps for our method vs. supervised learning
 ![attn](https://raw.githubusercontent.com/ai4ce/Contrastive-SPARE3D/main/docs/figs/attention_example.JPG?token=AKI7ZKL7NU7MPKBDTEYNXVDASRTF6)
 
 ## Acknowledgment
