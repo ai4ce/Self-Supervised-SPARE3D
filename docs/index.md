@@ -57,4 +57,4 @@ To cite our paper:
 ![attn](https://raw.githubusercontent.com/ai4ce/Contrastive-SPARE3D/main/docs/figs/attention_example.JPG?token=AKI7ZKL7NU7MPKBDTEYNXVDASRTF6)
 
 ## Acknowledgment
- The research is supported by NSF Future Manufacturing program under EEC-2036870. Siyuan Xiang gratefully thanks the IDC Foundation for its scholarship. 
+The first two authors contributed equally. Chen Feng is the corresponding author. The research is supported by NSF Future Manufacturing program under EEC-2036870. Siyuan Xiang gratefully thanks the IDC Foundation for its scholarship. 
