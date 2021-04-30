@@ -30,7 +30,7 @@ Run ```P2I_trainer.py```with the parameters explained in args in the code.
 ### Attention map generation
 #### [attention_map_generation](https://github.com/ai4ce/Contrastive-SPARE3D/tree/main/Data_generation/Attention_Map)
 Generate attention maps of the trained model using ```attention_map.py``` with image path and the root of trained model path.
-## [Paper (arXiv)](https://arxiv.org/abs/2103.16732)
+## [Paper (arXiv)](https://arxiv.org/abs/2104.13433)
 To cite our paper:
 ```
 @misc{xiang2021contrastive,
