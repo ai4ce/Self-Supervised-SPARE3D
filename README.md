@@ -1,4 +1,4 @@
-# Contrastive Spatial Reasoning on Multi-View Line Drawings
+# Self-supervised Spatial Reasoning on Multi-View Line Drawings
 
 [**Siyuan Xiang**](), [**Anbang Yang**](https://github.com/endeleze), [**Yanfei Xue**](),[**Yaoqing Yang**](), [**Chen Feng**](https://engineering.nyu.edu/faculty/chen-feng)
 
