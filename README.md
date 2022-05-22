@@ -1,6 +1,6 @@
 # Self-supervised Spatial Reasoning on Multi-View Line Drawings
 
-[**Siyuan Xiang**](), [**Anbang Yang**](https://github.com/endeleze), [**Yanfei Xue**](),[**Yaoqing Yang**](), [**Chen Feng**](https://engineering.nyu.edu/faculty/chen-feng)
+[Siyuan Xiang*](), [Anbang Yang*](https://github.com/endeleze), [Yanfei Xue](),[Yaoqing Yang](), [Chen Feng](https://scholar.google.com/citations?user=YeG8ZM0AAAAJ)
 
 ## Abstract
 Spatial reasoning on multi-view line drawings by state-of-the-art supervised deep networks is recently shown with puzzling low performances on the SPARE3D dataset. To study the reason behind the low performance and to further our understandings of these geometric visual reasoning tasks, we design controlled experiments on both input data and baseline networks.
