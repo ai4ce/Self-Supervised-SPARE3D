@@ -49,9 +49,9 @@
 <div class="container" id="main">
     <div class="row">
         <h1 class="col-md-12 text-center">
-            Fooling LiDAR Perception via Adversarial Trajectory Perturbation </br>
+            Self-supervised Spatial Reasoning on Multi-View Line Drawings </br>
 <!--            <small>-->
-<!--                ICLR 2021-->
+<!--                CVPR 2022-->
 <!--            </small>-->
         </h1>
     </div>
@@ -60,27 +60,32 @@
         <div class="col-md-12 text-center">
             <ul class="list-inline">
                 <li>
-                    <a href="https://scholar.google.com/citations?user=i_aajNoAAAAJ&hl=en">
-                        Yiming Li
+                    <a>
+                        Siyuan Xiang
                     </a><sup>1 *</sup>
                 </li>
                 <li>
-                    <a href="https://scholar.google.com/citations?hl=en&user=OTBgvCYAAAAJ">
-                        Congcong Wen
-                    </a><sup>1, 2 *</sup>
+                    <a href="https://github.com/endeleze">
+                        Anbang Yang
+                    </a><sup>1 *</sup>
                 </li>
                 <li>
-                    <a href="https://scholar.google.com/citations?user=dgN8vtwAAAAJ&hl=en">
-                        Felix Juefei-Xu
-                    </a><sup>3</sup>
+                    <a>
+                        Yanfei Xue
+                    </a><sup>1</sup>
                 </li>
                 <li>
-                    <a href="https://scholar.google.com/citations?user=YeG8ZM0AAAAJ&hl=en">
+                    <a>
+                        Yaoqing Yang
+                    </a><sup>2</sup>
+                </li>
+                <li>
+                    <a href="https://scholar.google.com/citations?user=YeG8ZM0AAAAJ">
                         Chen Feng
                     </a><sup>1 &dagger;</sup>
                 </li>
             </ul>
-            <sup>1</sup>New York University, <sup>2</sup>University of Chinese Academy of Sciences, <sup>3</sup>Alibaba Group
+            <sup>1</sup>New York University Tandon School of Engineering, <sup>2</sup>University of California, Berkeley,
             <br>
             <sup>*</sup> Equal contributions.
             <br>
@@ -94,21 +99,21 @@
     <div class="row">
         <div class="col-xs-4 col-sm-2 col-sm-offset-3 text-center">
             <a href="https://ai4ce.github.io">
-                <image src="ai4ce.jpg" height="50px"></image>
+                <image src="docs/ai4ce.jpg" height="50px"></image>
                 <br>
                 <h4><strong>Lab</strong></h4>
             </a>
         </div>
         <div class="col-xs-4 col-sm-2 text-center">
-            <a href="https://arxiv.org/abs/2103.15326.pdf">
-                <image src="paper.png" height="50px"></image>
+            <a href="https://arxiv.org/pdf/2104.13433.pdf">
+                <image src="docs/paper.png" height="50px"></image>
                 <br>
                 <h4><strong>Paper</strong></h4>
             </a>
         </div>
         <div class="col-xs-4 col-sm-2 text-center">
-            <a href="https://github.com/ai4ce/FLAT">
-                <image src="github.png" height="50px"></image>
+            <a href="https://github.com/ai4ce/Self-Supervised-SPARE3D">
+                <image src="docs/github.png" height="50px"></image>
                 <br>
                 <h4><strong>Experiments</strong></h4>
             </a>
@@ -124,8 +129,7 @@
             <h3>
                 Abstract
             </h3>
-            LiDAR point clouds collected from a moving vehicle are functions of its trajectories, because the sensor motion needs to be compensated to avoid distortions. When autonomous vehicles are sending LiDAR point clouds to deep networks for perception and planning, could the motion compensation consequently become a wide-open backdoor in those networks, due to both the adversarial vulnerability of deep learning and GPS-based vehicle trajectory estimation that is susceptible to wireless spoofing? We demonstrate such possibilities for the first time: instead of directly attacking point cloud coordinates which requires tampering with the raw LiDAR readings, only adversarial spoofing of a self-driving car's trajectory with small perturbations is enough to make safety-critical objects undetectable or detected with incorrect positions. Moreover, polynomial trajectory perturbation is developed to achieve a temporally-smooth and highly-imperceptible attack. Extensive experiments on 3D object detection have shown that such attacks not only lower the performance of the state-of-the-art detectors effectively, but also transfer to other detectors, raising a red flag for the community.
-            <br>
+            Spatial reasoning on multi-view line drawings by state-of-the-art supervised deep networks is recently shown with puzzling low performances on the SPARE3D dataset. Based on the fact that self-supervised learning is helpful when a large number of data are available, we propose two self-supervised learning approaches to improve the baseline performance for view consistency reasoning and camera pose reasoning tasks on the SPARE3D dataset. For the first task, we use a self-supervised binary classification network to contrast the line drawing differences between various views of any two similar 3D objects, enabling the trained networks to effectively learn detail-sensitive yet view-invariant line drawing representations of 3D objects. For the second type of task, we propose a self-supervised multi-class classification framework to train a model to select the correct corresponding view from which a line drawing is rendered. Our method is even helpful for the downstream tasks with unseen camera poses. Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some popular self-supervised learning methods cannot.       <br>
             <br>
             <br>
             <br>
