@@ -1,4 +1,4 @@
-# Self-supervised Spatial Reasoning on Multi-View Line Drawings
+# Self-supervised Spatial Reasoning on Multi-View Line Drawings [CVPR 2022]
 
 [Siyuan Xiang*](), [Anbang Yang*](https://github.com/endeleze), [Yanfei Xue](),[Yaoqing Yang](), [Chen Feng](https://scholar.google.com/citations?user=YeG8ZM0AAAAJ)
 
