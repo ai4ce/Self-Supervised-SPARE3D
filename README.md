@@ -6,7 +6,7 @@
 
 <p align="center"><img src='docs/figs/teaser_fig_cut.JPG' align="center" height="500px"> </p>
 
-Poster Page: ai4ce.github.io/self-supervised-spare3d/
+[Poster Page](ai4ce.github.io/self-supervised-spare3d/)
 
 [**ArXiv: Self-supervised Spatial Reasoning on Multi-View Line Drawings**](https://arxiv.org/abs/2104.13433)     
 
