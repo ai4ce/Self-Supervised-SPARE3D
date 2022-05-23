@@ -3,8 +3,17 @@
 
 <style>
 table, th, td {
-  border:1px solid black;
+  border:2px solid black;
 }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+p {
+  font-size: 1.5rem;
+  text-align: justify;
+  }
 </style>
     
 <head lang="en">
@@ -135,8 +144,7 @@ table, th, td {
             <h3>
                 Abstract
             </h3>
-            Spatial reasoning on multi-view line drawings by state-of-the-art supervised deep networks is recently shown with puzzling low performances on the SPARE3D dataset. Based on the fact that self-supervised learning is helpful when a large number of data are available, we propose two self-supervised learning approaches to improve the baseline performance for view consistency reasoning and camera pose reasoning tasks on the SPARE3D dataset. For the first task, we use a self-supervised binary classification network to contrast the line drawing differences between various views of any two similar 3D objects, enabling the trained networks to effectively learn detail-sensitive yet view-invariant line drawing representations of 3D objects. For the second type of task, we propose a self-supervised multi-class classification framework to train a model to select the correct corresponding view from which a line drawing is rendered. Our method is even helpful for the downstream tasks with unseen camera poses. Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some popular self-supervised learning methods cannot.       <br>
-            <br>
+            <p>Spatial reasoning on multi-view line drawings by state-of-the-art supervised deep networks is recently shown with puzzling low performances on the SPARE3D dataset. Based on the fact that self-supervised learning is helpful when a large number of data are available, we propose two self-supervised learning approaches to improve the baseline performance for view consistency reasoning and camera pose reasoning tasks on the SPARE3D dataset. For the first task, we use a self-supervised binary classification network to contrast the line drawing differences between various views of any two similar 3D objects, enabling the trained networks to effectively learn detail-sensitive yet view-invariant line drawing representations of 3D objects. For the second type of task, we propose a self-supervised multi-class classification framework to train a model to select the correct corresponding view from which a line drawing is rendered. Our method is even helpful for the downstream tasks with unseen camera poses. Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some popular self-supervised learning methods cannot.</p>
             <br>
             <br>
             <image src="docs/figs/teaser_fig_cut.JPG" width="70%" class="center"></image>
@@ -152,7 +160,7 @@ table, th, td {
             <h3>
                 Contrastive learning network for task <em>T2I</em>
             </h3>
-            Our contrastive learning network. We use the learned representations to the downstream task <em>T2I</em>. Front (F), Right (R), Top (T) represent line drawings and an isometric (I) line drawing. <math>a<sub>1</sub></math>, <math>b<sub>1</sub></math>,<math>a<sub>2</sub></math>, <math>b<sub>2</sub></math> are the encoded feature vectors; <math>C</math>, <math>K</math> are the dimension of the latent vectors. The <math>f<sub>&theta;<sub>1</sub></sub></math> , <math>f<sub>&theta;<sub>2</sub></sub></math> , <math>f<sub>&theta;<sub>3</sub></sub></math> , and <math>f<sub>&theta;<sub>4</sub></sub></math> are CNN networks; <math>g<sub>&phi;<sub>1</sub></sub></math>, <math>g<sub>&phi;<sub>2</sub></sub></math> , and <math>h<sub>&psi;</sub></math> are MLP networks. <math>&oplus;</math> is a concatenation operation. BCE represents binary cross-entropy loss.
+            <p>Our contrastive learning network. We use the learned representations to the downstream task <em>T2I</em>. Front (F), Right (R), Top (T) represent line drawings and an isometric (I) line drawing. <math>a<sub>1</sub></math>, <math>b<sub>1</sub></math>,<math>a<sub>2</sub></math>, <math>b<sub>2</sub></math> are the encoded feature vectors; <math>C</math>, <math>K</math> are the dimension of the latent vectors. The <math>f<sub>&theta;<sub>1</sub></sub></math> , <math>f<sub>&theta;<sub>2</sub></sub></math> , <math>f<sub>&theta;<sub>3</sub></sub></math> , and <math>f<sub>&theta;<sub>4</sub></sub></math> are CNN networks; <math>g<sub>&phi;<sub>1</sub></sub></math>, <math>g<sub>&phi;<sub>2</sub></sub></math> , and <math>h<sub>&psi;</sub></math> are MLP networks. <math>&oplus;</math> is a concatenation operation. BCE represents binary cross-entropy loss.</p>
             <br>
             <br>
             <image src="docs/figs/Contrastive_Net.JPG" width="100%" class="center"></image>
@@ -168,7 +176,7 @@ table, th, td {
             <h3>
                 Self-supervised learning network architecture for task <em>I2P</em> and <em>P2I</em>
             </h3>
-            Our self-supervised learning network (left subfigure). We use the learned representations to the downstream tasks <em>I2P</em> and <em>P2I</em> (right subfigure). The <math>f<sub>&eta;<sub>1</sub></sub></math>, <math>f<sub>&eta;<sub>2</sub></sub></math>, <math>f<sub>&eta;<sub>3</sub></sub></math>, and <math>f<sub>&eta;<sub>4</sub></sub></math> are CNN networks; <math>g<sub>&omega;<sub>1</sub></sub></math>, <math>g<sub>&omega;<sub>2</sub></sub></math>, and <math>g<sub>&omega;<sub>3</sub></sub></math> are MLP networks; <math>c<sub>1</sub></math>,<math>d<sub>1</sub></math>,<math>e<sub>1</sub></math> are the encoded feature vectors.
+            <p>Our self-supervised learning network (left subfigure). We use the learned representations to the downstream tasks <em>I2P</em> and <em>P2I</em> (right subfigure). The <math>f<sub>&eta;<sub>1</sub></sub></math>, <math>f<sub>&eta;<sub>2</sub></sub></math>, <math>f<sub>&eta;<sub>3</sub></sub></math>, and <math>f<sub>&eta;<sub>4</sub></sub></math> are CNN networks; <math>g<sub>&omega;<sub>1</sub></sub></math>, <math>g<sub>&omega;<sub>2</sub></sub></math>, and <math>g<sub>&omega;<sub>3</sub></sub></math> are MLP networks; <math>c<sub>1</sub></math>,<math>d<sub>1</sub></math>,<math>e<sub>1</sub></math> are the encoded feature vectors.</p>
             <br>
             <br>
             <image src="docs/figs/Self-Supervise_Net.JPG" width="100%" class="center"></image>
@@ -183,7 +191,7 @@ table, th, td {
             <h3>
                Comparison of performance on <em>T2I</em> for SL method vs. SSL method.
             </h3>
-            SL and SSL represent supervised learning and self-supervised learning, respectively. 5K and 14K are the training data amount. Fine-tuning means we further use the 5K training data in SPARE3D to fine-tune the parameters. For supervised learning, we evaluate the network performance for: (1) using <em>early fusion</em> or <em>late fusion<em/> structure (details in the supplementary), (2) whether or not using ImageNet pre-trained parameters.
+            <p>SL and SSL represent supervised learning and self-supervised learning, respectively. 5K and 14K are the training data amount. Fine-tuning means we further use the 5K training data in SPARE3D to fine-tune the parameters. For supervised learning, we evaluate the network performance for: (1) using <em>early fusion</em> or <em>late fusion<em/> structure (details in the supplementary), (2) whether or not using ImageNet pre-trained parameters.</p>
             <br>
             <br>
             <table style="width:100%">
@@ -235,7 +243,7 @@ table, th, td {
             <h3>
                Attention maps for SL vs. SSL method in <em>T2I</em> task.
             </h3>
-            For each CAD model, the first row are the line drawings. The second and third row are the attention maps generated from supervised learning using <em>early fusion</em> and <em>late fusion</em>, respectively. The fourth row are the attention maps generated from our method. N/A indicates no attention map for the corresponding view. Best viewed in color.
+            <p>For each CAD model, the first row are the line drawings. The second and third row are the attention maps generated from supervised learning using <em>early fusion</em> and <em>late fusion</em>, respectively. The fourth row are the attention maps generated from our method. N/A indicates no attention map for the corresponding view. Best viewed in color.</p>
             <br>
             <br>
             <image src="docs/figs/attention_example.JPG" width="100%" class="center"></image>
@@ -250,7 +258,7 @@ table, th, td {
             <h3>
                 Acknowledgement
             </h3>
-            The first two authors contributed equally. Chen Feng is the corresponding author. The research is supported by NSF Future Manufacturing program under EEC-2036870. Siyuan Xiang gratefully thanks the IDC Foundation for its scholarship.
+            <p>The first two authors contributed equally. Chen Feng is the corresponding author. The research is supported by NSF Future Manufacturing program under EEC-2036870. Siyuan Xiang gratefully thanks the IDC Foundation for its scholarship.</p>
         </div>
         
     <br>
