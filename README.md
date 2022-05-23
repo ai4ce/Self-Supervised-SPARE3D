@@ -6,7 +6,8 @@
 
 <p align="center"><img src='docs/figs/teaser_fig_cut.JPG' align="center" height="500px"> </p>
 
-**Poster Page: **[ai4ce.github.io/Self-Supervised-SPARE3D](https://ai4ce.github.io/Self-Supervised-SPARE3D/)
+**Poster Page: ** 
+[ai4ce.github.io/Self-Supervised-SPARE3D](https://ai4ce.github.io/Self-Supervised-SPARE3D/)
 
 [**ArXiv: Self-supervised Spatial Reasoning on Multi-View Line Drawings**](https://arxiv.org/abs/2104.13433)     
 
