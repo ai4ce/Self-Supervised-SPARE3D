@@ -3,7 +3,7 @@
 
 <style>
 table, th, td {
-  border:2px solid black;
+  border:1.5px solid black;
 }
 img {
   display: block;
@@ -238,6 +238,77 @@ p {
     <br>
     <br>
     
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>
+               Comparison of performance on <em>I2P</em> and <em>P2I</em> tasks for SL method vs. SSL method.
+            </h3>
+            <p>With the increase of data amount for training, both supervised learning, and our self-supervised learning-based method achieve higher accuracy. For task <em>I2P</em>, the best accuracy achieves <math>98.0 %</math>, and for task <em>P2I</em>, the best accuracy is <math>83.4 %</math>. The best performance happens when using the <math>40,000</math> scale dataset with our self-supervised learning method. </p>
+            <br>
+            <br>
+            <table style="width:100%">
+                  <tr>
+                    <th>Data amount (K)</th>
+                    <th>5</th>
+                    <th>10</th>
+                    <th>15</th>
+                    <th>20</th>
+                    <th>25</th>
+                    <th>30</th>
+                    <th>35</th>
+                    <th>40</th>
+                  </tr>
+                  <tr>
+                    <th>I2P(SL)</th>
+                    <td>83.6</td>
+                    <td>86.4</td>
+                    <td>87.7</td>
+                    <td>88.5</td>
+                    <td>88.7</td>
+                    <td>90.4</td>
+                    <td>90.6</td>
+                    <td>91.1</td>
+                  </tr>
+                  <tr>
+                    <th>I2P(SSL)</th>
+                    <td>88.7</td>
+                    <td>93.2</td>
+                    <td>95.1</td>
+                    <td>96.4</td>
+                    <td>96.7</td>
+                    <td>97.7</td>
+                    <td>97.5</td>
+                    <td><strong>98.0</strong></td>
+                  </tr>
+                  <tr>
+                    <th>P2I(SL)</th>
+                    <td>65.4</td>
+                    <td>67.1</td>
+                    <td>68.5</td>
+                    <td>67.8</td>
+                    <td>69.8</td>
+                    <td>69.6</td>
+                    <td>68.5</td>
+                    <td>70.4</td>
+                  </tr>
+                  <tr>
+                    <th>P2I(SSL)</th>
+                    <td>72.4</td>
+                    <td>80.8</td>
+                    <td>81.9</td>
+                    <td>82.1</td>
+                    <td>82.8</td>
+                    <td>83.1</td>
+                    <td>83.0</td>
+                    <td><strong>83.4</strong></td>
+                  </tr>
+            </table>
+        </div>
+    </div>
+
+    <br>
+    <br>
+  
        <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h3>
