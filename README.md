@@ -3,11 +3,8 @@
 [Siyuan Xiang*](), [Anbang Yang*](https://github.com/endeleze), [Yanfei Xue](),[Yaoqing Yang](), [Chen Feng](https://scholar.google.com/citations?user=YeG8ZM0AAAAJ)
 
 ## Abstract
-Spatial reasoning on multi-view line drawings by state-of-the-art supervised deep networks is recently shown with puzzling low performances on the SPARE3D dataset. To study the reason behind the low performance and to further our understandings of these geometric visual reasoning tasks, we design controlled experiments on both input data and baseline networks.
-Guided by the hindsight from these experiment results, we propose a simple contrastive learning approach along with other network modifications to improve the baseline performance. 
-Our approach uses a self-supervised binary classification network to compare the line drawing differences between various views of any two similar 3D objects.
-It enables deep networks to effectively learn detail-sensitive yet view-invariant line drawing representations of 3D objects. 
-Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some other popular self-supervised learning methods cannot.
+Spatial reasoning on multi-view line drawings by state-of-the-art supervised deep networks is recently shown with puzzling low performances on the SPARE3D dataset. Based on the fact that self-supervised learning is helpful when a large number of data are available, we propose two self-supervised learning approaches to improve the baseline performance for view consistency reasoning and camera pose reasoning tasks on the SPARE3D dataset. For the first task, we use a self-supervised binary classification network to contrast the line drawing differences between various views of any two similar 3D objects, enabling the trained networks to effectively learn detail-sensitive yet view-invariant line drawing representations of 3D objects. For the second type of task, we propose a self-supervised multi-class classification framework to train a model to select the correct corresponding view from which a line drawing is rendered. Our method is even helpful for the downstream tasks with unseen camera poses. Experiments show that our method could significantly increase the baseline performance in SPARE3D, while some popular self-supervised learning methods cannot.
+            
 
 ## Data
 You can download the dataset via [our google drive link](https://drive.google.com/drive/u/0/folders/1yPu3pa57eCm2iRx6AwWnp_IZK9r_RAxY). This google drive folder contains two files:
