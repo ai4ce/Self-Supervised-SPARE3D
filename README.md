@@ -2,6 +2,8 @@
 
 [Siyuan Xiang*](), [Anbang Yang*](https://github.com/endeleze), [Yanfei Xue](),[Yaoqing Yang](), [Chen Feng](https://scholar.google.com/citations?user=YeG8ZM0AAAAJ)
 
+**We significantly improve SPARE3D baselines using self-supervised learning approaches.**
+
 <p align="center"><img src='docs/figs/teaser_fig_cut.JPG' align="center" height="500px"> </p>
 
 Poster Page: ai4ce.github.io/self-supervised-spare3d/
